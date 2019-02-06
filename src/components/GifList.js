@@ -3,9 +3,9 @@ import React from 'react'
 const GifList = (props) => {
   const renderGifs = () => {
 
-    return props.gifs.map(gif => {
-      return <li>
-        <img key={gif.id} src={gif.images.original.url} alt="gif"/>
+    return props.gifs.map((gif,idx) => {
+      return <li key={gif.id}>
+        <img src={gif.images.original.url} alt="gif"/>
             </li>
     })
   }
